@@ -19,7 +19,7 @@ window.addEventListener("load", () =>{
                 })
                     .then(data =>{
                     console.log(data);
-                    const {temperature, summary} = data.currently;
+                    const {temperature, summary, icon} = data.currently;
                 
                     //Set DOM elements from the API
                     temperatureDegree.textContent = temperature;
@@ -27,24 +27,21 @@ window.addEventListener("load", () =>{
                     locationTimezone.textContent = data.timezone;
                     let remundtz = locationTimezone.textContent.replace(/_/g,' ');
                     locationTimezone.textContent = remundtz;
+                    setIcons(icon, document.querySelector('.icon'));
                     
                     
                     
                 });
-            
-                
-            
-            
-                
-            
-        
-        
-        
         });
     }else{
         h1.textContent = "geolocation is not working";
     }
-        
+      function setIcons(icon, iconID){
+          const skycons = new Skycons({ color: "white" });
+          const currentIcon = icon.replace(/-/g,'_').toUpperCase();
+          skycons.play();
+          return skycons.set(iconID, Skycons[currentIcon]);
+      }  
 });
 
 
