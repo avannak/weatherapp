@@ -1,4 +1,16 @@
+
 window.addEventListener("load", () =>{
+    navigator.geolocation.watchPosition(function(position) {
+        console.log("i'm tracking you!");
+      },
+      function(error) {
+        if (error.code == error.PERMISSION_DENIED)
+          console.log("you denied me :-(");
+        alert("In order to detect weather, please enable location.");
+        
+        
+        
+      });
     if(navigator.geolocation){
         let long;
         let lat;
@@ -22,19 +34,38 @@ window.addEventListener("load", () =>{
                     const {temperature, summary, icon} = data.currently;
                 
                     //Set DOM elements from the API
-                    temperatureDegree.textContent = temperature;
+                    const fartocel = Math.round((temperature - 32)*5/9);
+                    temperatureDegree.textContent = temperature + ('°F')+(' /') + fartocel + ('°C');
                     temperatureDescription.textContent = summary;
                     locationTimezone.textContent = data.timezone;
                     let remundtz = locationTimezone.textContent.replace(/_/g,' ');
                     locationTimezone.textContent = remundtz;
                     setIcons(icon, document.querySelector('.icon'));
+                    if(icon == "partly-cloudy-day"){
+                        console.log("icon is partlycloudyday");
+                        $(".partlycloudy").fadeToggle(2500);
+                        
+                    }
+                    if(icon == "partly-cloudy-night"){
+                        console.log("icon is partlycloudynight");
+                        $(".partlycloudynight").fadeToggle(2500);
+                       
+                        
+                    }
+                    if(icon == "rain"){
+                        console.log("icon is rain");
+                        $(".rain").fadeToggle(2500);
+                       
+                        
+                    }
+                    
+                    
                     
                     
                     
                 });
         });
-    }else{
-        h1.textContent = "geolocation is not working";
+        
     }
       function setIcons(icon, iconID){
           const skycons = new Skycons({ color: "white" });

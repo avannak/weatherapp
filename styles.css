@@ -1,34 +1,120 @@
 
 body{
-    background: rgb(190,216,255);
-    background: linear-gradient(8deg, rgba(190,216,255,1) 0%, rgba(182,182,255,1) 41%, rgba(0,212,255,1) 100%);
-    padding: 50%;
-    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: black;
+    
+}
+.background{
+    font-size: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+ 
+   height: 100vh;
+   width: 100vw;
+    
+}
+.weatherframe{
+    font-size: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+   height: 100vh;
+   width: 100vw;
+    align-items: center;
+    position: absolute;
+    z-index: -14;
+}
+.bgimg{
+    font-size: 4vw;
+    background-image: url("weatherbackgrounds/searching.gif");
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    height:100vh;
+    width:100vw;
+   position: absolute;
+  
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: -16;
 }
-.location{
-    font-family: 'Nunito', sans-serif;
-    font-size: 72px;
+.partlycloudy{
+    font-size: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    height:100vh;
+    width:100vw;
+    background-image: url("weatherbackgrounds/partlycloudy.jpg");
    
-    align-items: center;
+    z-index: -15;
+}
+.partlycloudynight{
+    font-size: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    height:100vh;
+    width:100vw;
+    background-image: url("weatherbackgrounds/partlycloudynight.jpg");
+   
     
+}
+.rain{
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    height:100vh;
+    width:100vw;
+    background-image: url("weatherbackgrounds/rain.jpg");
+   
+    
+}
+
+.location{
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 4vw;
+    padding: 3%;
+   height: 30%;
+   width: 50%;
+    align-items: center;
+    text-align: center;
     color: aliceblue;
     
 }
 .icon{
     font-family: 'Nunito', sans-serif;
-    font-size: 72px;
+    font-size: 4vw;
     text-align: center;
-
+    padding: 100px;
     color: rgb(15, 47, 75);
     
 }
 .temperature{
-    font-size: 42px;
+    font-size: 4vw;
     font-family: 'Nunito', sans-serif;
     text-align: center;
+    align-items: center;
+    padding: 3%;
+    height: 30%;
+    width: 50%;
     color: aliceblue;
 }
 .degree-section{
@@ -36,10 +122,11 @@ body{
     align-items: center;
 }
 .temperature-description{
-   font-style: normal; 
+   font-weight: bolder; 
+   font-size: 4vw;
 }
 .location-timezone{
-    font-size: 20px;
+    font-size: 4vw;
     
     display: flex;
     flex-direction: column;
