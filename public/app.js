@@ -163,9 +163,9 @@ window.addEventListener("load", () =>{
                     container = false;
                 }
                 if(partlycloudynight){
-                    console.log("cloudy is turned off")
+                    console.log("partlycloudynight is turned off")
                     $(".partlycloudynight").fadeToggle(0);
-                    cloudy = false;
+                    partlycloudynight = false;
                 }
                 if(partlycloudyday){
                     console.log("partlycloudyday is turned off")
@@ -232,6 +232,21 @@ window.addEventListener("load", () =>{
                     $(".clearnight").fadeToggle(0);
                     clearnight = false;
                 }
+                if(windy){
+                    console.log("windy is turned off")
+                    $(".windy").fadeToggle(0);
+                    windy = false;
+                }
+                if(sleet){
+                    console.log("sleet is turned off")
+                    $(".sleet").fadeToggle(0);
+                    sleet = false;
+                }
+                if(fog){
+                    console.log("fog is turned off")
+                    $(".fog").fadeToggle(0);
+                    fog = false;
+                }
                 
                 console.log("icon is partlycloudynight");
                 if(!partlycloudynight){
@@ -279,6 +294,21 @@ window.addEventListener("load", () =>{
                     $(".clearnight").fadeToggle(0);
                     clearnight = false;
                 }
+                if(windy){
+                    console.log("windy is turned off")
+                    $(".windy").fadeToggle(0);
+                    windy = false;
+                }
+                if(sleet){
+                    console.log("sleet is turned off")
+                    $(".sleet").fadeToggle(0);
+                    sleet = false;
+                }
+                if(fog){
+                    console.log("fog is turned off")
+                    $(".fog").fadeToggle(0);
+                    fog = false;
+                }
                 console.log("icon is rain");
                 if(!rain){
                     $(".rain").fadeToggle(2500);
@@ -324,6 +354,21 @@ window.addEventListener("load", () =>{
                     console.log("clearnight is turned off")
                     $(".clearnight").fadeToggle(0);
                     clearnight = false;
+                }
+                if(windy){
+                    console.log("windy is turned off")
+                    $(".windy").fadeToggle(0);
+                    windy = false;
+                }
+                if(sleet){
+                    console.log("sleet is turned off")
+                    $(".sleet").fadeToggle(0);
+                    sleet = false;
+                }
+                if(fog){
+                    console.log("fog is turned off")
+                    $(".fog").fadeToggle(0);
+                    fog = false;
                 }
                 console.log("icon is clearday");
                 if(!clearday){
@@ -371,6 +416,21 @@ window.addEventListener("load", () =>{
                     console.log("clearday is turned off")
                     $(".clearday").fadeToggle(0);
                     clearday = false;
+                }
+                if(windy){
+                    console.log("windy is turned off")
+                    $(".windy").fadeToggle(0);
+                    windy = false;
+                }
+                if(sleet){
+                    console.log("sleet is turned off")
+                    $(".sleet").fadeToggle(0);
+                    sleet = false;
+                }
+                if(fog){
+                    console.log("fog is turned off")
+                    $(".fog").fadeToggle(0);
+                    fog = false;
                 }
                 console.log("icon is clearnight");
                 if(!clearnight){
@@ -746,7 +806,7 @@ window.addEventListener("load", () =>{
                         }
                         console.log("icon is partlycloudyday");
                         if(!partlycloudyday){
-                            $(".partlycloudy").fadeToggle(2500);
+                            $(".partlycloudyday").fadeToggle(2500);
                             console.log("it is still partlycloudyday");
                             partlycloudyday=true;
                         }
