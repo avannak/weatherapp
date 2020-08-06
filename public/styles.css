@@ -1,4 +1,6 @@
-
+html{
+    font-size: 1em;
+}
 body{
     margin-left: auto;
     margin-right: auto;
@@ -9,7 +11,9 @@ body{
     
 }
 
-
+#thetime{
+    font-size: 1em;
+}
 .c-checkbox {
     display: none;
 }
@@ -593,7 +597,7 @@ body{
    width: 70%;
 }
 .location-timezone{
-    font-size: 4vw;
+    font-size: 1.5em;
     
     display: flex;
     flex-direction: column;
@@ -605,8 +609,11 @@ body{
     bottom: 90%;
     
 }
+#datespan{
+
+}
 .date{
-    font-size: 4vw;
+    font-size: 1em;
     
     display: flex;
     flex-direction: column;
